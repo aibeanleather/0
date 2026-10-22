@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aibean | آیبین — محصولات چرمی آیبین</title>
+<meta name="description" content="Aibean — محصولات چرمی آیبین، فروش چرم. تماس: 09024506734">
+<style>
+  :root{
+    --primary:#0f766e;
+    --primary-dark:#0b5e57;
+    --accent:#f59e0b;
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#1e293b;
+    --muted:#64748b;
+    --border:#e2e8f0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family: Tahoma, "Segoe UI", sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.9;
+  }
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+  /* هدر */
+  header{
+    background:var(--card);
+    border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:10;
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 0;flex-wrap:wrap;gap:10px;
+  }
+  .logo{font-weight:bold;font-size:1.4rem;color:var(--primary);letter-spacing:.5px;direction:ltr;}
+  .logo span{color:var(--text)}
+  .nav-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.95rem}
+  .nav-links a:hover{color:var(--primary)}
+
+  /* هیرو */
+  .hero{
+    background:linear-gradient(135deg,#0f766e,#115e59);
+    color:#fff;
+    padding:70px 0 60px;
+    text-align:center;
+  }
+  .hero h1{font-size:2rem;margin-bottom:14px}
+  .hero p{max-width:640px;margin:0 auto 26px;opacity:.92}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:10px;
+    font-weight:bold;transition:.2s;border:2px solid transparent;
+  }
+  .btn-primary{background:#fff;color:var(--primary)}
+  .btn-primary:hover{background:#ecfdf5}
+  .btn-outline{border-color:#fff;color:#fff;margin-right:10px}
+  .btn-outline:hover{background:rgba(255,255,255,.12)}
+
+  /* بخش‌ها */
+  section{padding:60px 0}
+  .section-title{text-align:center;font-size:1.5rem;margin-bottom:10px}
+  .section-sub{text-align:center;color:var(--muted);margin-bottom:36px}
+
+  /* خدمات */
+  .cards{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+    max-width:520px;
+    margin:0 auto;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--border);
+    border-radius:14px;padding:24px;text-align:center;transition:.2s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,0,0,.06)}
+  .card .icon{font-size:2rem;margin-bottom:10px}
+  .card h3{font-size:1.05rem;margin-bottom:8px;color:var(--primary-dark)}
+  .card p{font-size:.9rem;color:var(--muted)}
+
+  /* تماس */
+  .contact-wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;
+    background:var(--card);border:1px solid var(--border);
+    border-radius:16px;padding:30px;
+  }
+  .contact-item{
+    display:flex;align-items:center;gap:14px;padding:14px 0;
+    border-bottom:1px dashed var(--border);
+  }
+  .contact-item:last-child{border-bottom:none}
+  .contact-item .ic{
+    width:46px;height:46px;flex:0 0 46px;border-radius:12px;
+    background:#ccfbf1;color:var(--primary);
+    display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+  }
+  .contact-item small{display:block;color:var(--muted);font-size:.78rem}
+  .contact-item strong{font-size:1rem;direction:ltr;display:inline-block}
+  .contact-note{font-size:.85rem;color:var(--muted);margin-top:12px}
+
+  /* فوتر */
+  footer{
+    background:#0f172a;color:#cbd5e1;text-align:center;
+    padding:26px 0;font-size:.85rem;margin-top:20px;
+  }
+  footer a{color:#5eead4}
+
+  /* دکمه شناور ایتا */
+  .float-eitaa{
+    position:fixed;bottom:22px;left:22px;
+    background:var(--accent);color:#fff;font-weight:bold;
+    padding:13px 20px;border-radius:50px;
+    box-shadow:0 8px 20px rgba(245,158,11,.4);
+    z-index:50;font-size:.9rem;
+  }
+  .float-eitaa:hover{background:#d97706}
+
+  @media(max-width:760px){
+    .contact-wrap{grid-template-columns:1fr}
+    .hero h1{font-size:1.5rem}
+    .btn-outline{margin-right:0;margin-top:10px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Aibean</div>
+    <nav class="nav-links">
+      <a href="#services">محصولات چرمی</a>
+      <a href="#contact">تماس با ما</a>
+      <a href="#about">درباره ما</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <h1>محصولات چرمی آیبین</h1>
+    <p>چرم اصل، دوخت باکیفیت، طراحی ماندگار — همین حالا سفارش خود را ثبت کنید.</p>
+    <a class="btn btn-primary" href="tel:09024506734">📞 تماس: 09024506734</a>
+    <a class="btn btn-outline" href="https://eitaa.com/Aibean" target="_blank" rel="noopener">💬 چت در ایتا: @Aibean</a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">محصولات چرمی آیبین</h2>
+    <p class="section-sub">چرم با کیفیت — دست‌ساز و بادوام</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🟫</div>
+        <h3>محصولات چرمی آیبین</h3>
+        <p>چرم با کیفیت و دوخت حرفه‌ای، مناسب کیف پول و کمربند.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">تماس با ما</h2>
+    <p class="section-sub">برای سفارش یا مشاوره، از راه‌های زیر با ما در ارتباط باشید</p>
+    <div class="contact-wrap">
+      <div>
+        <div class="contact-item">
+          <div class="ic">📞</div>
+          <div>
+            <small>شماره تماس</small>
+            <strong><a href="tel:09024506734">09024506734</a></strong>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">💬</div>
+          <div>
+            <small>چت در ایتا</small>
+            <strong><a href="https://eitaa.com/Aibean" target="_blank" rel="noopener">@Aibean</a></strong>
+          </div>
+        </div>
+        <p class="contact-note">ساعات پاسخگویی: شنبه تا پنجشنبه، ۹ صبح تا ۸ شب</p>
+      </div>
+      <div>
+        <div class="contact-item">
+          <div class="ic">📍</div>
+          <div>
+            <small>آدرس</small>
+            <strong>آدرس خود را اینجا وارد کنید</strong>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">🕘</div>
+          <div>
+            <small>ساعت کاری</small>
+            <strong>۹:۰۰ تا ۲۰:۰۰</strong>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">📷</div>
+          <div>
+            <small>شبکه‌های اجتماعی</small>
+            <strong>لینک اینستاگرام</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">درباره Aibean</h2>
+    <p class="section-sub" style="max-width:700px;margin:0 auto">
+      Aibean با سال‌ها تجربه در زمینه فروش چرم و محصولات چرمی، تلاش می‌کند
+      بهترین چرم با کیفیت بالا و قیمت مناسب را به شما ارائه دهد.
+      رضایت شما، مهم‌ترین سرمایه ماست.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © ۱۴۰۴ Aibean — تمامی حقوق محفوظ است | تماس:
+    <a href="tel:09024506734">09024506734</a> |
+    ایتا: <a href="https://eitaa.com/Aibean" target="_blank" rel="noopener">@Aibean</a>
+  </div>
+</footer>
+
+<a class="float-eitaa" href="https://eitaa.com/Aibean" target="_blank" rel="noopener">
+  💬 چت در ایتا @Aibean
+</a>
+
+</body>
+</html>
